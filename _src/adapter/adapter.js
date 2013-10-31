@@ -138,7 +138,7 @@
 
 
                 //添加tooltip;
-                $.eduitooltip && $.eduitooltip('attachTo').css('z-index',editor.getOpt('zIndex')+1);
+                // $.eduitooltip && $.eduitooltip('attachTo').css('z-index',editor.getOpt('zIndex')+1);
 
                 $container.find('a').click(function(evt){
                     evt.preventDefault()
@@ -171,8 +171,9 @@
                 }
             });
 
-            $container.find('.edui-editor-body').append($editorCont).before(this.createToolbar(editor.options, editor));
-
+            // $container.find('.edui-editor-body').append($editorCont).before(this.createToolbar(editor.options, editor));
+            $container.find('.edui-editor-body').append($editorCont);
+            
             $container.find('.edui-toolbar').append($('<div class="edui-dialog-container"></div>'));
 
 

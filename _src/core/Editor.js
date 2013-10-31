@@ -50,11 +50,11 @@
 
         me.fireEvent("langReady");
     }
-    function checkCurLang(I18N){
-        for(var lang in I18N){
-            return lang
-        }
-    }
+    // function checkCurLang(I18N){
+    //     for(var lang in I18N){
+    //         return lang
+    //     }
+    // }
     /**
      * UEditor编辑器类
      * @name Editor
@@ -98,21 +98,22 @@
             autoHeightEnabled : true
         });
 
-        if(!utils.isEmptyObject(UM.I18N)){
-            //修改默认的语言类型
-            me.options.lang = checkCurLang(UM.I18N);
-            loadPlugins(me)
-        }else{
-            utils.loadFile(document, {
-                src: me.options.langPath + me.options.lang + "/" + me.options.lang + ".js",
-                tag: "script",
-                type: "text/javascript",
-                defer: "defer"
-            }, function () {
-                loadPlugins(me)
-            });
-        }
-
+        // 移除加载语言包，但仍然加载插件
+        // if(!utils.isEmptyObject(UM.I18N)){
+        //     //修改默认的语言类型
+        //     me.options.lang = checkCurLang(UM.I18N);
+        //     loadPlugins(me)
+        // }else{
+        //     utils.loadFile(document, {
+        //         src: me.options.langPath + me.options.lang + "/" + me.options.lang + ".js",
+        //         tag: "script",
+        //         type: "text/javascript",
+        //         defer: "defer"
+        //     }, function () {
+        //         loadPlugins(me)
+        //     });
+        // }
+        loadPlugins(me);
     };
     Editor.prototype = {
         /**

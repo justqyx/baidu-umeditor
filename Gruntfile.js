@@ -103,7 +103,8 @@ module.exports = function ( grunt ) {
                 files: [
                     {
 
-                        src: [ 'themes/default/images/**', 'dialogs/**', 'lang/**' ],
+                        // src: [ 'themes/default/images/**', 'dialogs/**', 'lang/**' ],
+                        src: [ 'themes/default/images/**' ],
                         dest: disDir
 
                     }

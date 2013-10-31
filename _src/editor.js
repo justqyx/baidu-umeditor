@@ -5,7 +5,7 @@ window.UM = {
 
     commands : {},
 
-    I18N : {},
+    // I18N : {},
 
     version : "1.0.0"
 };
